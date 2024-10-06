@@ -6,9 +6,24 @@ import ProjectsBox from './component/ProjectsBox';
 import ContactBox from './component/ContactBox';
 import Footer from './component/Footer';
 import './App.css'
-
+import Typed from 'typed.js';
+import {useEffect} from "react";
 
 function App() {
+
+  useEffect(()=>{
+    /**ใช้เอคเฟค */
+    const typingEffect = new Typed(".TypedText",{
+      strings:["Student","Developer","Software Engineer"],
+      loop:true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 2000,
+});
+return () =>{
+  typingEffect.destroy();
+};
+},[]); 
 
   return (
     <>    
