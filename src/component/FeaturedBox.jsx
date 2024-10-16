@@ -1,5 +1,6 @@
 import React from "react";
 import avatar from "../assets/images/avatar.jpg";
+import cv from "../assets/dowload/Port.pdf";
 
 const FeaturedBox = () => {
   return (
@@ -11,39 +12,45 @@ const FeaturedBox = () => {
         <div className="featured-name">
           I'm <span className="TypedText"></span>
         </div>
-        <p className="featured-description">
-          ฉันเป็นคนที่ชอบเรียนรู้สิ่งใหม่ๆ,และมีความสนใจในเทคโนโลยี,โดยเฉพาะด้านการพัฒนาเว็บไซต์และการเขียนโปรแกรม,
-          ฉันเชื่อว่าการทำงานเป็นทีมมีความสำคัญมาก,และมักจะพยายามสื่อสารกับคนรอบข้างเพื่อให้เกิดความเข้าใจที่ดี,
-          นอกจากนี้ฉันยังมีความคิดสร้างสรรค์ที่ช่วยให้สามารถแก้ไขปัญหาได้อย่างมีประสิทธิภาพ,ฉันมักจะมองหาความท้าทายใหม่ๆ,
-          และไม่กลัวที่จะเผชิญกับอุปสรรค,เพราะฉันเชื่อว่าทุกการทดลองคือโอกาสในการเติบโต,
-          ฉันรักการอ่านหนังสือและฟังเพลงเพื่อช่วยให้จิตใจมีความสุขและผ่อนคลาย,และมักจะใช้เวลาว่างในการทำกิจกรรมที่สนุกสนานกับเพื่อนๆและครอบครัว
-        </p>
+        <div className="featured-text-info">
+          <p className="featured-description">
+            ฉันเป็นคนที่ชอบเรียนรู้สิ่งใหม่ๆ,และมีความสนใจในเทคโนโลยี,โดยเฉพาะด้านการพัฒนาเว็บไซต์และการเขียนโปรแกรม,
+            ฉันเชื่อว่าการทำงานเป็นทีมมีความสำคัญมาก,และมักจะพยายามสื่อสารกับคนรอบข้างเพื่อให้เกิดความเข้าใจที่ดี,
+            นอกจากนี้ฉันยังมีความคิดสร้างสรรค์ที่ช่วยให้สามารถแก้ไขปัญหาได้อย่างมีประสิทธิภาพ,ฉันมักจะมองหาความท้าทายใหม่ๆ,
+            และไม่กลัวที่จะเผชิญกับอุปสรรค,เพราะฉันเชื่อว่าทุกการทดลองคือโอกาสในการเติบโต,
+            ฉันรักการอ่านหนังสือและฟังเพลงเพื่อช่วยให้จิตใจมีความสุขและผ่อนคลาย
+          </p>
+        </div>
 
         {/* ปุ่มดาวน์โหลด CV */}
         <div className="featured-text-btn">
-          <a href="#" className="btn download-cv-btn">
+          <button href={cv} className="btn">
             <i className="uil uil-file-alt"></i> Download CV
-          </a>
+          </button>
         </div>
 
+
         {/* ปุ่มโซเชียลมีเดีย */}
-        <ul className="social_icons">
-          <li>
-            <a href="#" className="icon social-icon">
+        <div className="social_icons">
+          <div className="icon">
+            <a
+              href="https://www.facebook.com/thanawad.srisaeng.35/?locale=th_TH"
+              className="icon social-icon"
+            >
               <i className="uil uil-facebook"></i>
             </a>
-          </li>
-          <li>
+          </div>
+          <div className="icon">
             <a href="#" className="icon social-icon">
               <i className="uil uil-twitter"></i>
             </a>
-          </li>
-          <li>
+          </div>
+          <div className="icon">
             <a href="#" className="icon social-icon">
               <i className="uil uil-linkedin"></i>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
 
       <div className="featured-image">

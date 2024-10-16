@@ -1,12 +1,13 @@
 import React from "react";
+import cv from "../assets/dowload/Port.pdf";
 
 const Header = () => {
   const menufunction = () => {
     const menuBtn = document.getElementById("myNavMenu");
-    if (menuBtn.className === "nav_menu_list") {
+    if (menuBtn.className === "nav-menu") {
       menuBtn.className += " responsive";
     } else {
-      menuBtn.className = "nav_menu_list";
+      menuBtn.className = "nav-menu";
     }
   };
 
@@ -16,22 +17,27 @@ const Header = () => {
         <p className="nav-name">Thanawat</p>
         <span></span>
       </div>
-      <div className="nav-menu">
-        <ul className="nav_menu_list" id="myNavMenu">
-          <li><a href="#Home" className="nav-link">Home</a></li>
-          <li><a href="#About" className="nav-link">About</a></li>
-          <li><a href="#Project" className="nav-link">Project</a></li>
-          <li><a href="#Contact" className="nav-link">Contact</a></li>
+
+      <div className="nav-menu" id="myNavMenu">
+        <ul className="nav_menu_list nav_list" >
+          <li><a href="#home" className="nav-link active-link">Home</a></li>
+          <li><a href="#about" className="nav-link">About</a></li>
+          <li><a href="#project" className="nav-link">Project</a></li>
+          <li><a href="#contact" className="nav-link">Contact</a></li>
         </ul>
-        <div className="nav-button">
-          <button className="btn">
-            Download CV <i className="uil uil-file-info-alt"></i>
-          </button>
-        </div>
-        <div className="nav-menu-btn" onClick={menufunction}>
-          <i className="uil uil-bars"></i>
-        </div>
+
       </div>
+        <div className="nav-button">
+        <a href={cv}>
+          <button className="btn">
+          Download CV <i className="uil uil-file-info-alt"></i>
+          </button>
+        </a>
+        </div>
+
+        <div className="nav-menu-btn">
+          <i className="uil uil-bars" onClick={menufunction}></i>
+        </div>
     </nav>
   );
 };
